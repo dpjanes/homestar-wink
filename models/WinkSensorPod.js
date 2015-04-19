@@ -1,5 +1,5 @@
 /*
- *  WinkRemote.js
+ *  WinkSensorPod.js
  *
  *  David Janes
  *  IOTDB
@@ -8,15 +8,14 @@
 
 var iotdb = require("iotdb");
 
-exports.Model = iotdb.make_model('WinkRemote')
-    .facet(":control")
-    .name("Wink Remote")
+exports.Model = iotdb.make_model('WinkSensorPod')
+    .name("Wink Sensor Pod")
     .make();
 
 exports.binding = {
     bridge: require('../WinkBridge').Bridge,
     model: exports.Model,
     matchd: {
-        'iot:vendor/type': 'remote',
+        'iot:vendor/type': 'sensor_pod',
     },
 };
