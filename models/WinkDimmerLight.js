@@ -17,4 +17,7 @@ exports.Model = iotdb.make_model('WinkDimmerLight')
 exports.binding = {
     bridge: require('../WinkBridge').Bridge,
     model: exports.Model,
+    matchd: {
+        'iot:vendor/type': 'light_bulb',
+    },
 };
