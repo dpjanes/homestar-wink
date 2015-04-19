@@ -1,5 +1,5 @@
 /*
- *  WinkDimmerLight.js
+ *  WinkLight.js
  *
  *  David Janes
  *  IOTDB
@@ -8,9 +8,9 @@
 
 var iotdb = require("iotdb");
 
-exports.Model = iotdb.make_model('WinkDimmerLight')
+exports.Model = iotdb.make_model('WinkLight')
     .facet(":lighting")
-    .name("Wink Dimmer Light")
+    .name("Wink Light")
     .io("on", iotdb.boolean.on)
     .make();
 

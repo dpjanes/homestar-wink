@@ -24,7 +24,9 @@
 
 exports.Bridge = require('./WinkBridge');
 exports.bindings = [
-    require('./models/WinkDimmerLight').binding,
+    require('./models/WinkLight').binding,
+    require('./models/WinkRemote').binding,
+    require('./models/WinkHub').binding,
 ];
 
 exports.iotdb = require("iotdb");
