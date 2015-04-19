@@ -79,13 +79,45 @@ WinkBridge.prototype.discover = function () {
 
     /*
      *  This is the core bit of discovery. As you find new
-     *  thimgs, make a new WinkBridge and call 'discovered'.
+     *  things, make a new WinkBridge and call 'discovered'.
      *  The first argument should be self.initd, the second
      *  the thing that you do work with
      */
-    var s = self._template();
-    s.on('something', function (native) {
-        self.discovered(new WinkBridge(self.initd, native));
+    var cfgd = iotdb.keystore().get("bridges/WinkBridge");
+    if (!cfgd) {
+        logger.error({
+            method: "discover",
+        }, "WinkBridge is not configured");
+        return;
+    }
+
+    var wink_api = new WinkAPI.WinkAPI({
+        clientID: cfgd.client_id,
+        clientSecret: cfgd.client_secret,
+    });
+    var wink_api.login(credentiald.username, credentiald.password, function(error) {
+        if (error) {
+            logger.error({
+                method: "discover/login",
+                error: error,
+            }, "WinkBridge could not login");
+            return;
+        }
+
+        wink_api.getDevices(function(error, devices) {
+            if (error) {
+                logger.error({
+                    method: "discover/login/getDevices",
+                    error: error,
+                }, "WinkBridge could not getDevices");
+                return;
+            }
+
+            for (var di in devices) {
+                self.discovered(new WinkBridge(self.initd, devices[di]));
+            }
+        });
+
     });
 };
 
@@ -257,20 +289,6 @@ WinkBridge.prototype.pulled = function (pulld) {
 };
 
 /* -- internals -- */
-var __singleton;
-
-/**
- *  If you need a singleton to access the library
- */
-WinkBridge.prototype._template = function () {
-    var self = this;
-
-    if (!__singleton) {
-        __singleton = template.init();
-    }
-
-    return __singleton;
-};
 
 /*
  *  API
