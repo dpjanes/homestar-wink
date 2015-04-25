@@ -6,7 +6,7 @@
 var Bridge = require('../WinkBridge').Bridge;
 
 var bridge_exemplar = new Bridge();
-bridge_exemplar.discovered = function(bridge) {
+bridge_exemplar.discovered = function (bridge) {
     console.log("+ got one\n ", bridge.meta());
     /*
     bridge.pulled = function(state) {

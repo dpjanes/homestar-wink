@@ -47,7 +47,7 @@ var WinkBridge = function (initd, native) {
             poll: 30
         }
     );
-    self.native = native;   // the thing that does the work - keep this name
+    self.native = native; // the thing that does the work - keep this name
 
     if (self.native) {
         self.queue = _.queue("WinkBridge");
@@ -90,7 +90,7 @@ WinkBridge.prototype.discover = function () {
         clientID: cfgd.client_id,
         clientSecret: cfgd.client_secret,
     });
-    wink_api.login(cfgd.username, cfgd.password, function(error) {
+    wink_api.login(cfgd.username, cfgd.password, function (error) {
         if (error) {
             logger.error({
                 method: "discover/login",
@@ -99,7 +99,7 @@ WinkBridge.prototype.discover = function () {
             return;
         }
 
-        wink_api.getDevices(function(error, devices) {
+        wink_api.getDevices(function (error, devices) {
             if (error) {
                 logger.error({
                     method: "discover/login/getDevices",
@@ -188,7 +188,7 @@ WinkBridge.prototype.push = function (pushd) {
 
     logger.info({
         method: "push",
-        putd: putd
+        pushd: pushd,
     }, "push");
 
     var qitem = {
@@ -207,8 +207,7 @@ WinkBridge.prototype.push = function (pushd) {
  *  consider just moving this up into push
  */
 WinkBridge.prototype._push = function (pushd) {
-    if (pushd.on !== undefined) {
-    }
+    if (pushd.on !== undefined) {}
 };
 
 /**
