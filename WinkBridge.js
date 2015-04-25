@@ -34,16 +34,10 @@ var logger = bunyan.createLogger({
 });
 
 /**
- *  EXEMPLAR and INSTANCE
+ *  See {iotdb.bridge.Bridge#Bridge} for documentation.
  *  <p>
- *  No subclassing needed! The following functions are
- *  injected _after_ this is created, and before .discover and .connect
- *  <ul>
- *  <li><code>discovered</code> - tell IOTDB that we're talking to a new Thing
- *  <li><code>pulled</code> - got new data
- *  <li><code>connected</code> - this is connected to a Thing
- *  <li><code>disconnnected</code> - this has been disconnected from a Thing
- *  </ul>
+ *  @param {object|undefined} native
+ *  only used for instances, should be 
  */
 var WinkBridge = function (initd, native) {
     var self = this;
@@ -69,12 +63,7 @@ WinkBridge.prototype.name = function () {
 /* --- lifecycle --- */
 
 /**
- *  EXEMPLAR.
- *  <ul>
- *  <li>look for Things (using <code>self.bridge</code> data to initialize)
- *  <li>find / create a <code>native</code> that does the talking
- *  <li>create an WinkBridge(native)
- *  <li>call <code>self.discovered(bridge)</code> with it
+ *  See {iotdb.bridge.Bridge#XXX} for documentation.
  */
 WinkBridge.prototype.discover = function () {
     var self = this;
@@ -128,8 +117,7 @@ WinkBridge.prototype.discover = function () {
 };
 
 /**
- *  INSTANCE
- *  This is called when the Bridge is no longer needed. When
+ *  See {iotdb.bridge.Bridge#XXX} for documentation.
  */
 WinkBridge.prototype.connect = function (connectd) {
     var self = this;
@@ -172,8 +160,7 @@ WinkBridge.prototype._forget = function () {
 };
 
 /**
- *  INSTANCE and EXEMPLAR (during shutdown).
- *  This is called when the Bridge is no longer needed.
+ *  See {iotdb.bridge.Bridge#XXX} for documentation.
  */
 WinkBridge.prototype.disconnect = function () {
     var self = this;
@@ -187,8 +174,7 @@ WinkBridge.prototype.disconnect = function () {
 /* --- data --- */
 
 /**
- *  INSTANCE.
- *  Send data to whatever you're taking to.
+ *  See {iotdb.bridge.Bridge#XXX} for documentation.
  */
 WinkBridge.prototype.push = function (pushd) {
     var self = this;
@@ -222,9 +208,7 @@ WinkBridge.prototype._push = function (pushd) {
 };
 
 /**
- *  INSTANCE.
- *  Pull data from whatever we're talking to. You don't
- *  have to implement this if it doesn't make sense
+ *  See {iotdb.bridge.Bridge#XXX} for documentation.
  */
 WinkBridge.prototype.pull = function () {
     var self = this;
@@ -236,18 +220,7 @@ WinkBridge.prototype.pull = function () {
 /* --- state --- */
 
 /**
- *  INSTANCE.
- *  Return the metadata - compact form can be used.
- *  Does not have to work when not reachable
- *  <p>
- *  Really really useful things are:
- *  <ul>
- *  <li><code>iot:thing</code> required - a unique ID
- *  <li><code>iot:device</code> suggested if linking multiple things together
- *  <li><code>schema:name</code>
- *  <li><code>iot:number</code>
- *  <li><code>schema:manufacturer</code>
- *  <li><code>schema:model</code>
+ *  See {iotdb.bridge.Bridge#XXX} for documentation.
  */
 WinkBridge.prototype.meta = function () {
     var self = this;
@@ -271,20 +244,14 @@ WinkBridge.prototype.meta = function () {
 };
 
 /**
- *  INSTANCE.
- *  Return True if this is reachable. You
- *  do not need to worry about connect / disconnect /
- *  shutdown states, they will be always checked first.
+ *  See {iotdb.bridge.Bridge#XXX} for documentation.
  */
 WinkBridge.prototype.reachable = function () {
     return this.native !== null;
 };
 
 /**
- *  INSTANCE.
- *  Configure an express web page to configure this Bridge.
- *  Return the name of the Bridge, which may be
- *  listed and displayed to the user.
+ *  See {iotdb.bridge.Bridge#XXX} for documentation.
  */
 WinkBridge.prototype.configure = function (app) {};
 
