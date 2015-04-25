@@ -255,15 +255,6 @@ WinkBridge.prototype.reachable = function () {
  */
 WinkBridge.prototype.configure = function (app) {};
 
-/* --- injected: THIS CODE WILL BE REMOVED AT RUNTIME, DO NOT MODIFY  --- */
-WinkBridge.prototype.discovered = function (bridge) {
-    throw new Error("WinkBridge.discovered not implemented");
-};
-
-WinkBridge.prototype.pulled = function (pulld) {
-    throw new Error("WinkBridge.pulled not implemented");
-};
-
 /* -- internals -- */
 
 /*
