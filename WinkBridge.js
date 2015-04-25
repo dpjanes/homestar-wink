@@ -63,7 +63,7 @@ WinkBridge.prototype.name = function () {
 /* --- lifecycle --- */
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#discover} for documentation.
  */
 WinkBridge.prototype.discover = function () {
     var self = this;
@@ -117,7 +117,7 @@ WinkBridge.prototype.discover = function () {
 };
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#connect} for documentation.
  */
 WinkBridge.prototype.connect = function (connectd) {
     var self = this;
@@ -162,7 +162,7 @@ WinkBridge.prototype._forget = function () {
 };
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#disconnect} for documentation.
  */
 WinkBridge.prototype.disconnect = function () {
     var self = this;
@@ -176,7 +176,7 @@ WinkBridge.prototype.disconnect = function () {
 /* --- data --- */
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#push} for documentation.
  */
 WinkBridge.prototype.push = function (pushd) {
     var self = this;
@@ -212,7 +212,7 @@ WinkBridge.prototype._push = function (pushd) {
 };
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#pull} for documentation.
  */
 WinkBridge.prototype.pull = function () {
     var self = this;
@@ -224,7 +224,7 @@ WinkBridge.prototype.pull = function () {
 /* --- state --- */
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#meta} for documentation.
  */
 WinkBridge.prototype.meta = function () {
     var self = this;
@@ -248,14 +248,14 @@ WinkBridge.prototype.meta = function () {
 };
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#reachable} for documentation.
  */
 WinkBridge.prototype.reachable = function () {
     return this.native !== null;
 };
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#configure} for documentation.
  */
 WinkBridge.prototype.configure = function (app) {};
 
