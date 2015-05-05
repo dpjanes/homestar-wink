@@ -22,7 +22,7 @@
 
 "use strict";
 
-exports.Bridge = require('./WinkBridge');
+exports.Bridge = require('./WinkBridge').Bridge;
 exports.bindings = [
     require('./models/WinkAirConditioner').binding,
     require('./models/WinkCloudClock').binding,
