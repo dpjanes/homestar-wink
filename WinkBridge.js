@@ -178,9 +178,10 @@ WinkBridge.prototype.disconnect = function () {
 /**
  *  See {iotdb.bridge.Bridge#push} for documentation.
  */
-WinkBridge.prototype.push = function (pushd) {
+WinkBridge.prototype.push = function (pushd, done) {
     var self = this;
     if (!self.native) {
+        done(new Error("not connected"));
         return;
     }
 
@@ -197,6 +198,7 @@ WinkBridge.prototype.push = function (pushd) {
         run: function () {
             self._pushd(pushd);
             self.queue.finished(qitem);
+            done();
         }
     };
     self.queue.add(qitem);
