@@ -16,6 +16,6 @@ exports.binding = {
     bridge: require('../WinkBridge').Bridge,
     model: exports.Model,
     matchd: {
-        'iot:vendor/type': 'piggy_bank',
+        'iot:vendor.type': 'piggy_bank',
     },
 };

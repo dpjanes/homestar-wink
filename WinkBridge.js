@@ -242,8 +242,8 @@ WinkBridge.prototype.meta = function () {
         // "iot:number": self.initd.number,
         // "iot:device": _.id.thing_urn.unique("Wink", self.native.uuid),
         "schema:manufacturer": self.native.props.device_manufacturer,
-        'iot:vendor/type': self.native.type,
-        'iot:vendor/model': self.native.props.model_name,
+        'iot:vendor.type': self.native.type,
+        'iot:vendor.model': self.native.props.model_name,
     };
 
 };

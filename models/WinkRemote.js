@@ -17,6 +17,6 @@ exports.binding = {
     bridge: require('../WinkBridge').Bridge,
     model: exports.Model,
     matchd: {
-        'iot:vendor/type': 'remote',
+        'iot:vendor.type': 'remote',
     },
 };

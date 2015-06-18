@@ -16,6 +16,6 @@ exports.binding = {
     bridge: require('../WinkBridge').Bridge,
     model: exports.Model,
     matchd: {
-        'iot:vendor/type': 'air_conditioner',
+        'iot:vendor.type': 'air_conditioner',
     },
 };

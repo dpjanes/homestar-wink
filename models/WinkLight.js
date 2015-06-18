@@ -18,6 +18,6 @@ exports.binding = {
     bridge: require('../WinkBridge').Bridge,
     model: exports.Model,
     matchd: {
-        'iot:vendor/type': 'light_bulb',
+        'iot:vendor.type': 'light_bulb',
     },
 };
