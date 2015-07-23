@@ -22,7 +22,7 @@
     "main": "index.js", 
     "name": "homestar-wink", 
     "peerDependencies": {
-        "iotdb": "~0.8.1", 
+        "iotdb": "~0.9.1", 
         "node-winkapi": "~0.1.2"
     }, 
     "private": false, 
@@ -33,5 +33,5 @@
     "scripts": {
         "test": "grunt"
     }, 
-    "version": "0.1.5"
+    "version": "0.1.6"
 }
