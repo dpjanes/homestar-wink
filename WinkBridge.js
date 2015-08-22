@@ -239,7 +239,7 @@ WinkBridge.prototype.meta = function () {
 
         // other possibilites
         // "iot:thing": _.id.thing_urn.unique("Wink", self.native.uuid, self.initd.number),
-        // "iot:number": self.initd.number,
+        // "iot:thing-number": self.initd.number,
         // "iot:device-id": _.id.thing_urn.unique("Wink", self.native.uuid),
         "schema:manufacturer": self.native.props.device_manufacturer,
         'iot:vendor.type': self.native.type,
