@@ -4,7 +4,8 @@
         "url": "https://github.com/dpjanes/homestar-wink/issues"
     }, 
     "dependencies": {
-        "iotdb": ">=0.10.0"
+        "iotdb": ">=0.10.0", 
+        "node-winkapi": "~0.1.2"
     }, 
     "description": "HomeStar / IOTDB Bridge for Wink", 
     "devDependencies": {
@@ -23,9 +24,6 @@
     "license": "Apache-2.0", 
     "main": "index.js", 
     "name": "homestar-wink", 
-    "peerDependencies": {
-        "node-winkapi": "~0.1.2"
-    }, 
     "private": false, 
     "repository": {
         "type": "git", 
@@ -34,5 +32,5 @@
     "scripts": {
         "test": "grunt"
     }, 
-    "version": "0.1.8"
+    "version": "0.1.9"
 }
