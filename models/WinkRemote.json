@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "@base": "file:///wink-remote",
+    "@vocab": "file:///wink-remote#",
+    "iot": "https://iotdb.org/pub/iot#",
+    "schema": "http://schema.org/",
+    "iot-facet": "https://iotdb.org/pub/iot-facet#",
+    "iot:facet": {
+      "@id": "https://iotdb.org/pub/iot#facet",
+      "@type": "@id"
+    }
+  },
+  "@id": "",
+  "@type": "iot:Model",
+  "schema:name": "Wink Remote",
+  "iot:facet": [
+    "iot-facet:control"
+  ]
+}

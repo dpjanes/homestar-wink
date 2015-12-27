@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "@base": "file:///wink-egg-tray",
+    "@vocab": "file:///wink-egg-tray#",
+    "iot": "https://iotdb.org/pub/iot#",
+    "schema": "http://schema.org/"
+  },
+  "@id": "",
+  "@type": "iot:Model",
+  "schema:name": "Wink Egg Tray"
+}

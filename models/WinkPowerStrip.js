@@ -6,15 +6,9 @@
  *  2015-04-19
  */
 
-var iotdb = require("iotdb");
-
-exports.Model = iotdb.make_model('WinkPowerStrip')
-    .name("Wink Power Strip")
-    .make();
-
 exports.binding = {
     bridge: require('../WinkBridge').Bridge,
-    model: exports.Model,
+    model: require('./WinkPowerStrip.json'),
     matchd: {
         'iot:vendor.type': 'powerstrip',
     },

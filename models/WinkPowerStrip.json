@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "@base": "file:///wink-power-strip",
+    "@vocab": "file:///wink-power-strip#",
+    "iot": "https://iotdb.org/pub/iot#",
+    "schema": "http://schema.org/"
+  },
+  "@id": "",
+  "@type": "iot:Model",
+  "schema:name": "Wink Power Strip"
+}

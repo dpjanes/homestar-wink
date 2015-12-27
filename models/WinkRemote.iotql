@@ -1,0 +1,4 @@
+CREATE MODEL WinkRemote WITH
+    schema:name = "Wink Remote",
+    iot:facet = iot-facet:control
+;

@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "@base": "file:///wink-air-conditioner",
+    "@vocab": "file:///wink-air-conditioner#",
+    "iot": "https://iotdb.org/pub/iot#",
+    "schema": "http://schema.org/"
+  },
+  "@id": "",
+  "@type": "iot:Model",
+  "schema:name": "Wink Air Conditioner"
+}

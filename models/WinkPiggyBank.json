@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "@base": "file:///wink-piggy-bank",
+    "@vocab": "file:///wink-piggy-bank#",
+    "iot": "https://iotdb.org/pub/iot#",
+    "schema": "http://schema.org/"
+  },
+  "@id": "",
+  "@type": "iot:Model",
+  "schema:name": "Wink Piggy Bank"
+}

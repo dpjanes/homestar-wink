@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "@base": "file:///wink-cloud-clock",
+    "@vocab": "file:///wink-cloud-clock#",
+    "iot": "https://iotdb.org/pub/iot#",
+    "schema": "http://schema.org/"
+  },
+  "@id": "",
+  "@type": "iot:Model",
+  "schema:name": "Wink Cloud Clock"
+}

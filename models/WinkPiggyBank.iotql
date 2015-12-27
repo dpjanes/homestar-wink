@@ -1,0 +1,3 @@
+CREATE MODEL WinkPiggyBank WITH
+    schema:name = "Wink Piggy Bank"
+;

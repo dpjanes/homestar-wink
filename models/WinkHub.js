@@ -6,15 +6,9 @@
  *  2015-04-19
  */
 
-var iotdb = require("iotdb");
-
-exports.Model = iotdb.make_model('WinkHub')
-    .name("Wink Hub")
-    .make();
-
 exports.binding = {
     bridge: require('../WinkBridge').Bridge,
-    model: exports.Model,
+    model: require('./WinkHub.json'),
     matchd: {
         'iot:vendor.type': 'hub',
     },
