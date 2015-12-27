@@ -34,7 +34,7 @@ echo "=================="
         README.md LICENSE \
         homestar.json package.json \
         WinkBridge.js index.js \
-        models/*js \
+        models/*.js models/*.json\
         |
     ( cd "${NPM_DST}" && tar xvf - && npm publish ) || exit 1
     git commit -m "new release" package.json || exit 1
