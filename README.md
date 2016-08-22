@@ -1,7 +1,9 @@
 # homestar-wink
-IOTDB / HomeStar Controller for Quirky / Wink Devices
+[IOTDB](https://github.com/dpjanes/node-iotdb) Bridge for Wink Devices
 
 <img src="https://raw.githubusercontent.com/dpjanes/iotdb-homestar/master/docs/HomeStar.png" align="right" />
+
+CURRENTLY A Stub - Wink is too difficult as a company to work with
 
 # Installation
 
