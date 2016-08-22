@@ -3,16 +3,15 @@
 
 <img src="https://raw.githubusercontent.com/dpjanes/iotdb-homestar/master/docs/HomeStar.png" align="right" />
 
-CURRENTLY A Stub - Wink is too difficult as a company to work with
+CURRENTLY A Stub - Wink is very difficult to get working API keys from
 
 # Installation
 
-Install Home☆Star first. 
-See: https://github.com/dpjanes/iotdb-homestar#installation
+* [Read this first](https://github.com/dpjanes/node-iotdb/blob/master/docs/install.md)
 
-Then
+Then:
 
-    $ homestar install homestar-wink
+    $ npm install homestar-wink
 
 ## Important Links
 
