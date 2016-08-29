@@ -35,3 +35,5 @@ exports.bindings = [
     require('./models/WinkRemote').binding,
     require('./models/WinkSensorPod').binding,
 ];
+
+exports.module_folder = __dirname;
