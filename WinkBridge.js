@@ -55,10 +55,6 @@ var WinkBridge = function (initd, native) {
 
 WinkBridge.prototype = new iotdb.Bridge();
 
-WinkBridge.prototype.name = function () {
-    return "WinkBridge";
-};
-
 /* --- lifecycle --- */
 
 /**
